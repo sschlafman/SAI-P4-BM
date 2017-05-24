@@ -3,7 +3,8 @@ SUBDIRS = sai-adapter/ p4-softswitch/
 all : $(SUBDIRS)
 
 sai-adapter/ :
-	install_deps
+	cd sai-adapter
+	./install_deps
 	$(MAKE) -C $@
 
 p4-softswitch/ :
