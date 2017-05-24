@@ -1,13 +1,13 @@
-SUBDIRS = sai-adapter/ p4-softswitch/
+SUBDIRS = sai_adapter/ p4-softswitch/
 all : $(SUBDIRS)
-.PHONY : all
+.PHONY : all $(SUBDIRS)
 
 sai-adapter/ :
-	cd sai_adapter && ./install_deps.sh
+	cd sai_adapter && ./install_deps.sh && cd ..
 	$(MAKE) -C $@
-	cd ..
 
 p4-softswitch/ :
-	cd p4-softswitch
 	$(MAKE) -C $@
-	cd ..
+
+lacp-teaming/ :
+	$(MAKE) -C $@
