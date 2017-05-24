@@ -4,7 +4,7 @@ all : $(SUBDIRS)
 
 sai-adapter/ :
 	cd sai_adapter
-	./install_deps
+	./install_deps.sh
 	$(MAKE) -C $@
 	cd ..
 
