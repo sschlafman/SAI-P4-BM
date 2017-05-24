@@ -3,8 +3,7 @@ all : $(SUBDIRS)
 .PHONY : all
 
 sai-adapter/ :
-	cd sai_adapter
-	./install_deps.sh
+	cd sai_adapter && ./install_deps.sh
 	$(MAKE) -C $@
 	cd ..
 
