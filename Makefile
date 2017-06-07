@@ -4,7 +4,7 @@ all : $(SUBDIRS)
 
 # need to add sudo make install for bmv2
 p4-softswitch/ :
-	git init && cd p4-softswitch && ./install_deps.sh && ./autogen.sh && ./configure && cd ..
+	cd p4-softswitch && ./install_deps.sh && ./autogen.sh && ./configure && cd ..
 	$(MAKE) -C $@
 
 sai-adapter/ :

@@ -1,11 +1,9 @@
 #!/bin/sh
 
 THIS_DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-echo pwd
+pwd
 source $THIS_DIR/common.sh
-echo "check thrift lib"
 check_lib libthrift libthrift-0.9.2
-echo "check thrift lib - done"
 set -e
 wget http://archive.apache.org/dist/thrift/0.9.2/thrift-0.9.2.tar.gz
 tar -xzvf thrift-0.9.2.tar.gz
