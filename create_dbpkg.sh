@@ -22,7 +22,7 @@ mkdir ../TEMP/$OUTPUT_PATH
 
 # add files to debian dir
 mkdir debian
-#dch --create -v $VER-$DEBVER --package $PACKAGE
+dch --create -v $VER-$DEBVER --package $PACKAGE
 cd debian
 #pwd
 echo 10 > compat
