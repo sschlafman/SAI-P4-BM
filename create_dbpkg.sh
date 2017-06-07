@@ -19,20 +19,10 @@ mkdir ../TEMP
 mkdir ../TEMP/$OUTPUT_PATH
 
 #cd $REPO_PATH
-#git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
-dpkg-buildpackage -us -uc
-
-#mv $OUTPUT_TAR ./../$OUTPUT_PATH/
-cd ../TEMP/
-
-# unpack
-cd $OUTPUT_PATH
-tar xf $OUTPUT_TAR
-mv $OUTPUT_TAR ./../
 
 # add files to debian dir
 mkdir debian
-dch --create -v $VER-$DEBVER --package $PACKAGE
+#dch --create -v $VER-$DEBVER --package $PACKAGE
 cd debian
 #pwd
 echo 10 > compat
@@ -40,9 +30,19 @@ echo 10 > compat
 #cp ../../../rules .
 touch copyright
 mkdir source
-cd source
-echo "3.0 (quilt)" > format
-cd ../
+echo "3.0 (quilt)" > source/format
+cd ..
+
+#git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
+dpkg-buildpackage -us -uc
+
+#mv $OUTPUT_TAR ./../$OUTPUT_PATH/
+cd ../TEMP/
+cp 
+# unpack
+cd $OUTPUT_PATH
+tar xf $OUTPUT_TAR
+mv $OUTPUT_TAR ./../
 
 # build package
 debuild -us -uc
