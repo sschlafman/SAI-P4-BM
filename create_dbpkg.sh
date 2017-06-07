@@ -32,9 +32,9 @@ touch copyright
 mkdir source
 echo "3.0 (quilt)" > source/format
 cd ..
-
+pwd
 #git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
-dpkg-buildpackage -us -uc
+dpkg-buildpackage -b -rfakeroot -us -uc
 
 #mv $OUTPUT_TAR ./../$OUTPUT_PATH/
 cd ../TEMP/
