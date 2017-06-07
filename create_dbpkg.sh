@@ -19,7 +19,9 @@ mkdir ../TEMP
 mkdir ../TEMP/$OUTPUT_PATH
 
 #cd $REPO_PATH
-git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
+#git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
+dpkg-buildpackage -us -uc
+
 #mv $OUTPUT_TAR ./../$OUTPUT_PATH/
 cd ../TEMP/
 
