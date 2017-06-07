@@ -1,0 +1,14 @@
+Source: saibm
+Maintainer: Omer Shabtai <snifbh@gmail.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.7
+Build-Depends: debhelper (>= 9)
+
+Package: saibm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Switch Abstraction Interface - Behavioral Model
+ SAI-BM modeled in P4
+ P4 softswitch and matching SAI API, includes test framework.
+ please refer to the README.md
