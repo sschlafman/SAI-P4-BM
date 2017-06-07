@@ -34,7 +34,7 @@ echo "3.0 (quilt)" > source/format
 cd ..
 pwd
 #git archive debian --format=tar.gz --output ../TEMP/$OUTPUT_PATH/$OUTPUT_TAR
-dpkg-buildpackage -b -rfakeroot -us -uc
+dpkg-buildpackage -F -rfakeroot -us -uc
 
 #mv $OUTPUT_TAR ./../$OUTPUT_PATH/
 cd ../TEMP/
