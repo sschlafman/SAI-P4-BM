@@ -1,6 +1,5 @@
-saibm (0.01-1) UNRELEASED; urgency=medium
+saibm (0.02-1) UNRELEASED; urgency=medium
 
   * Initial release. (Closes: #XXXXXX)
 
  -- Omer Shabtai <snifbh@gmail.com>  Wed, 07 Jun 2017 15:02:06 +0300
-
